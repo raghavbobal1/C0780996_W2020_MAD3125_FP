@@ -99,6 +99,3 @@ public class Mobile extends Bill {
         this.minutesUsed = minute;
     }
 }
-
-
-}
