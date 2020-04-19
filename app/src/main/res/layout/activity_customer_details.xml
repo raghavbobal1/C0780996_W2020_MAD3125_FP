@@ -21,6 +21,7 @@
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginTop="604dp"
+        android:background="#F34280"
         android:scaleType="fitCenter"
         android:src="@drawable/add_btn"
         app:layout_constraintEnd_toEndOf="parent"

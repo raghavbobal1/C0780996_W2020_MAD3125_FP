@@ -16,7 +16,6 @@ public class Customer implements Parcelable
     private String email;
     private String userName;
     private String password;
-    private String location;
     private String dateOfBirth;
     private HashMap<String, Bill> customerBillsHashMap = new HashMap<String, Bill>();
     private Double allTotal;
@@ -43,7 +42,6 @@ public class Customer implements Parcelable
         email = in.readString();
         userName = in.readString();
         password = in.readString();
-        location = in.readString();
         dateOfBirth = in.readString();
         customerBillsHashMap = in.readHashMap(Bill.class.getClassLoader());
         allTotal = in.readDouble();
@@ -73,7 +71,6 @@ public class Customer implements Parcelable
                      String email,
                      String userName,
                      String password,
-                     String location,
                      String dateOfBirth,
                      Integer customerImg)
     {
@@ -84,7 +81,6 @@ public class Customer implements Parcelable
         this.email = email;
         this.userName = userName;
         this.password = password;
-        this.location = location;
         this.dateOfBirth = dateOfBirth;
         this.customerImg = customerImg;
     }
@@ -142,14 +138,6 @@ public class Customer implements Parcelable
         this.password = password;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
     public String getDateOfBirth() {
         return dateOfBirth;
     }
@@ -188,7 +176,6 @@ public class Customer implements Parcelable
         dest.writeString(email);
         dest.writeString(userName);
         dest.writeString(password);
-        dest.writeString(location);
         dest.writeString(dateOfBirth);
         dest.writeMap(customerBillsHashMap);
         if (allTotal == null) {
