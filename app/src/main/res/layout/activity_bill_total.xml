@@ -14,19 +14,33 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="167dp"
-        android:layout_height="61dp"
+        android:layout_width="190dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
         android:text="Bill Total"
         android:textColor="#F34280"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:fontFamily="@font/coiny"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/recyclerView2" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="60dp"
+        android:background="000000"
+        android:scaleType="centerCrop"
+        android:src="@drawable/add_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
