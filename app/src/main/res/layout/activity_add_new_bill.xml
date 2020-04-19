@@ -180,4 +180,32 @@
             android:hint="Enter Plan Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/buttonAddBill"
+        android:layout_width="324dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="CLEAR FIELDS"
+        android:textColor="#F34280"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddBill2" />
+
+    <Button
+        android:id="@+id/buttonAddBill2"
+        android:layout_width="324dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="64dp"
+        android:background="#F34280"
+        android:text="Add Bill"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPlanName" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
