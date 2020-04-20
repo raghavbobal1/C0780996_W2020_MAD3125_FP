@@ -14,8 +14,8 @@
         <activity android:name=".BillTotalActivity" />
         <activity android:name=".AddNewCustomer" />
         <activity android:name=".CustomerListActivity" />
-        <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
