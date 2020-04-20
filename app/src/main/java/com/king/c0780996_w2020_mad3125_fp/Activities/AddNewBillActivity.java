@@ -35,7 +35,8 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AddNewBillActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class AddNewBillActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener
+{
     @BindView(R.id.spinnerBillType) Spinner spinnerBillType;
     @BindView(R.id.editBillId) TextInputLayout editBillId;
     @BindView(R.id.editBillIdtext) TextInputEditText editBillIdtext;
@@ -170,7 +171,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                     }
                     if (!someFlag)
                     {
-                        Mobile mObj = new Mobile(editBillId.getText().toString(),
+                        Mobile mObj = new Mobile(editBillIdtext.getText().toString(),
                                 Validations.getInstance().stringToDate(editBillDateText.getText().toString()),
                                 Bill.BillType.Mobile,
                                 editManufacturerNameText.getText().toString(),
