@@ -28,18 +28,9 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AddNewCustomerActivity extends AppCompatActivity {
-    @BindView(R.id.editCustomerId) TextInputLayout editCustomerId;
-    @BindView(R.id.editFName) TextInputLayout editFName;
-    @BindView(R.id.editLname) TextInputLayout editLname;
-    @BindView(R.id.editDOB) TextInputLayout editDOB;
-    @BindView(R.id.editUserName) TextInputLayout editUserName;
-    @BindView(R.id.editEmail) TextInputLayout editEmail;
-    @BindView(R.id.editPassword) TextInputLayout editPassword;
-    @BindView(R.id.editLocation) TextInputLayout editLocation;
-
+public class AddNewCustomerActivity extends AppCompatActivity
+{
     @BindView(R.id.spinner_gender) Spinner spinner_gender;
-
     @BindView(R.id.editCustomerIdtext) TextInputEditText editCustomerIdtext;
     @BindView(R.id.editFNametext) TextInputEditText editFNametext;
     @BindView(R.id.editLnametext) TextInputEditText editLnametext;
@@ -48,10 +39,16 @@ public class AddNewCustomerActivity extends AppCompatActivity {
     @BindView(R.id.editEmailText) TextInputEditText editEmailText;
     @BindView(R.id.editPasswordText) TextInputEditText editPasswordText;
     @BindView(R.id.editLocationText) TextInputEditText editLocationText;
-
+    @BindView(R.id.editCustomerId) TextInputLayout editCustomerId;
+    @BindView(R.id.editFName) TextInputLayout editFName;
+    @BindView(R.id.editLname) TextInputLayout editLname;
+    @BindView(R.id.editDOB) TextInputLayout editDOB;
+    @BindView(R.id.editUserName) TextInputLayout editUserName;
+    @BindView(R.id.editEmail) TextInputLayout editEmail;
+    @BindView(R.id.editPassword) TextInputLayout editPassword;
+    @BindView(R.id.editLocation) TextInputLayout editLocation;
     @BindView(R.id.btnSubmit) Button btnSubmit;
     @BindView(R.id.btnClear) Button btnClear;
-
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private String gender;
 
@@ -82,6 +79,11 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         });
     }
 
+
+    public static String getMonthName(int monthNumber){
+        String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
+        return monthNames[monthNumber-1];
+    }
     private void addingDatePicker()
     {
         editDOBtext.setOnClickListener(new View.OnClickListener() {
@@ -121,9 +123,25 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         };
     }
 
-    public static String getMonthName(int monthNumber){
-        String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
-        return monthNames[monthNumber-1];
+
+
+    public String getGender()
+    {
+        int genderSpinnerPosition = spinner_gender.getSelectedItemPosition();
+        gender = String.valueOf(spinner_gender.getItemAtPosition(genderSpinnerPosition));
+        return gender;
+    }
+
+    public void clearfields()
+    {
+        editUserNameText.getText().clear();
+        editPasswordText.getText().clear();
+        editDOBtext.getText().clear();
+        editCustomerIdtext.getText().clear();
+        editEmailText.getText().clear();
+        editLnametext.getText().clear();
+        editFNametext.getText().clear();
+        editLocationText.getText().clear();
     }
 
     public void fieldChecker()
@@ -214,22 +232,5 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         }
     }
 
-    public String getGender()
-    {
-        int genderSpinnerPosition = spinner_gender.getSelectedItemPosition();
-        gender = String.valueOf(spinner_gender.getItemAtPosition(genderSpinnerPosition));
-        return gender;
-    }
 
-    public void clearfields()
-    {
-        editUserNameText.getText().clear();
-        editPasswordText.getText().clear();
-        editDOBtext.getText().clear();
-        editCustomerIdtext.getText().clear();
-        editEmailText.getText().clear();
-        editLnametext.getText().clear();
-        editFNametext.getText().clear();
-        editLocationText.getText().clear();
-    }
 }
