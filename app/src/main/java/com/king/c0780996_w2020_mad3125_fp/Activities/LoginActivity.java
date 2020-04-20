@@ -44,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
 
         private Switch switchRembMe;
 
+        private TextView aboutUsText;
+
         public static ArrayList<String> emailList = new ArrayList<>();
 
         public static ArrayList<String> passwordList = new ArrayList<>();
@@ -72,4 +74,7 @@ public class LoginActivity extends AppCompatActivity {
             switchRembMe = findViewById(R.id.switchRembMe);
             editEmail = findViewById(R.id.editEmail);
             editPassword = findViewById(R.id.editPassword);
+            aboutUsText = findViewById(R.id.aboutUsText);
 
+
+           
