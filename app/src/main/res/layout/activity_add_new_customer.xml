@@ -177,7 +177,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/editLocation" />
 
     <Button
         android:id="@+id/btnClear"
@@ -201,7 +201,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/editLocation"
         android:layout_width="290dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -212,6 +212,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editPassword">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editLocationText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Your Location" />
