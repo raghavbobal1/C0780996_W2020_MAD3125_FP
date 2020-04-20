@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#040303"
     android:hapticFeedbackEnabled="false"
-    tools:context=".LoginActivity">
+    tools:context=".Activities.LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editEmail"

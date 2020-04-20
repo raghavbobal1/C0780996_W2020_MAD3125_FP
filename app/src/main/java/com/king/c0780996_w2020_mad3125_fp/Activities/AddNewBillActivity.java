@@ -1,8 +1,10 @@
-package com.king.c0780996_w2020_mad3125_fp;
+package com.king.c0780996_w2020_mad3125_fp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.king.c0780996_w2020_mad3125_fp.R;
 
 public class AddNewBillActivity extends AppCompatActivity {
 
