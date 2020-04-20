@@ -325,7 +325,8 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
     {
         editBillDateText.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 Calendar cal = Calendar.getInstance();
                 int year = cal.get(Calendar.YEAR);
                 int month = cal.get(Calendar.MONTH);

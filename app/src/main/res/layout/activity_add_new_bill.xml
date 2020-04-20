@@ -66,6 +66,7 @@
                 android:id="@+id/editBillIdtext"
                 android:layout_width="322dp"
                 android:layout_height="42dp"
+                android:background="#000000"
                 android:hint="Enter Bill Id" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,6 +75,7 @@
             android:layout_width="322dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
+            android:background="#000000"
             android:hint="Enter Units Used"
             app:hintTextColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/editBillId"
@@ -84,8 +86,16 @@
                 android:id="@+id/editUnitsUsedtext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#000000"
                 android:hint="Enter Units Used"
                 android:textColorHint="#FFFFFF" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editAgencyNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:hint="Enter Agency Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -93,6 +103,7 @@
             android:layout_width="324dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
+            android:background="#000000"
             android:hint="Enter Phone Number"
             android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/editBillId"
@@ -103,6 +114,7 @@
                 android:id="@+id/editPhoneNumberText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#000000"
                 android:hint="hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,11 +146,6 @@
             app:layout_constraintStart_toStartOf="@+id/editUnitsUsed"
             app:layout_constraintTop_toBottomOf="@+id/editUnitsUsed">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editAgencyNameText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Agency Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -146,6 +153,7 @@
             android:layout_width="324dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
+            android:background="#000000"
             android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/editDataUsed"
             app:layout_constraintHorizontal_bias="0.0"
@@ -156,6 +164,7 @@
                 android:id="@+id/editManufacturerNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#000000"
                 android:hint="Enter Manufacturer Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -164,6 +173,7 @@
             android:layout_width="324dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
+            android:background="#000000"
             android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/editManufacturerName"
             app:layout_constraintStart_toStartOf="@+id/editManufacturerName"
@@ -173,6 +183,7 @@
                 android:id="@+id/editPlanNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#000000"
                 android:hint="Enter Plan Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -185,6 +196,7 @@
             android:text="Add Bill"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
+            app:backgroundTint="#F34280"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
@@ -204,6 +216,7 @@
                 android:id="@+id/editBillDateText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#040404"
                 android:hint="Enter Bill Date" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -212,6 +225,7 @@
             android:layout_width="324dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
+            android:background="#101010"
             android:textColorHint="#FFFFFF"
             app:hintTextColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/editManufacturerName"
@@ -223,6 +237,7 @@
                 android:id="@+id/editMinsUsedText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#000000"
                 android:hint="Enter Minutes Used" />
         </com.google.android.material.textfield.TextInputLayout>
 
