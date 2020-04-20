@@ -89,7 +89,7 @@ public class CustomerListActivity extends AppCompatActivity {
     {
         DataStorage.getInstance().loadData();
         customerArrayList = new ArrayList();
-        HashMap<String, Customer> customerHashMap = DataRepository.getInstance().getCustomerMap();
+        HashMap<String, Customer> customerHashMap = DataStorage.getInstance().getCustomerMap();
         Collection<Customer> demoValues = customerHashMap.values();
         tempCustomerArrayList = new ArrayList<>(demoValues);
         customerArrayList.addAll(tempCustomerArrayList);
