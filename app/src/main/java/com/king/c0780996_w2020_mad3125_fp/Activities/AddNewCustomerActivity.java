@@ -214,5 +214,12 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         }
     }
 
-   
+    public String getGender()
+    {
+        int genderSpinnerPosition = spinner_gender.getSelectedItemPosition();
+        gender = String.valueOf(spinner_gender.getItemAtPosition(genderSpinnerPosition));
+        return gender;
+    }
+
+    
 }
