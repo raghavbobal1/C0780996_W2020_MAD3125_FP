@@ -17,8 +17,7 @@ Display bills of the respective customers, adding a button to add new bills for 
 * [Youtube.com](https://www.youtube.com/watch?v=A9rcKZUm0zM&t=287s) -  Used for removing Action Bars.
 * [Joda.org](https://www.joda.org/joda-time/index.html) - Working with Joda-Time.
 * [Youtube.com](https://www.youtube.com/watch?v=09EsYJrhBYE&t=356s) - Used for text inout layout.
-* [Stackoverflow.com](https://stackoverflow.com/questions/20082855/regular-expression-for-canadian-sin-social-insurance-number) - For SIN Validation.
+* [Stackoverflow.com](https://stackoverflow.com/questions/11253512/change-on-color-of-a-switch) - For switch colors
 * [Sitepoint.com](https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/) - Data transfer between activities using parcelable.
 * [Journaldev.com](https://www.journaldev.com/14748/android-textinputlayout-example) - Working with textfields using Material Design.
 * [Youtube.com](https://www.youtube.com/watch?v=aS__9RbCyHg) - Helped with pretty much everything.
-* [Github.com](https://github.com/AbhishekSanthoshJaya/C0769778_W2020_MAD3125_MidTerm) - Helped with calculations of tax.
