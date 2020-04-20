@@ -85,6 +85,15 @@ public class CustomerListActivity extends AppCompatActivity {
         });
     }
 
-   
+    private void loadCustomers()
+    {
+        DataStorage.getInstance().loadData();
+        customerArrayList = new ArrayList();
+        HashMap<String, Customer> customerHashMap = DataRepository.getInstance().getCustomerMap();
+        Collection<Customer> demoValues = customerHashMap.values();
+        tempCustomerArrayList = new ArrayList<>(demoValues);
+        customerArrayList.addAll(tempCustomerArrayList);
+    }
+
 
 }
