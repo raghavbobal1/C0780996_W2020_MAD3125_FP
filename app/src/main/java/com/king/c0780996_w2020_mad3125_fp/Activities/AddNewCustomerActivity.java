@@ -221,5 +221,15 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         return gender;
     }
 
-    
+    public void clearfields()
+    {
+        editUserNameText.getText().clear();
+        editPasswordText.getText().clear();
+        editDOBtext.getText().clear();
+        editCustomerIdtext.getText().clear();
+        editEmailText.getText().clear();
+        editLnametext.getText().clear();
+        editFNametext.getText().clear();
+        editLocationText.getText().clear();
+    }
 }
