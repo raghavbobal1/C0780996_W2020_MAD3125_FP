@@ -24,6 +24,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.king.c0780996_w2020_mad3125_fp.ModelClasses.Bill;
 import com.king.c0780996_w2020_mad3125_fp.ModelClasses.Customer;
 import com.king.c0780996_w2020_mad3125_fp.ModelClasses.Hydro;
+import com.king.c0780996_w2020_mad3125_fp.ModelClasses.Internet;
 import com.king.c0780996_w2020_mad3125_fp.ModelClasses.Mobile;
 import com.king.c0780996_w2020_mad3125_fp.R;
 import com.king.c0780996_w2020_mad3125_fp.Utility.Validations;
@@ -94,4 +95,304 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         addingDatePicker();
     }
 
-  
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+        ((TextView) parent.getChildAt(0)).setTextSize(18);
+        ((TextView) parent.getChildAt(0)).setTypeface(null, Typeface.BOLD);
+
+        if(position == 0)
+        {
+            initFields();
+            clearfields();
+            editUnitsUsed.setVisibility(View.INVISIBLE);
+            editAgencyName.setVisibility(View.INVISIBLE);
+            buttonAddBill.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    boolean someFlag = false;
+                    if(editBillIdtext.getText().toString().isEmpty())
+                    {
+                        editBillIdtext.setError("Enter Bill ID");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editBillDateText.getText().toString().isEmpty()){
+                        editBillDateText.setError("Enter Bill Date");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editPhoneNumberText.getText().toString().isEmpty())
+                    {
+                        editPhoneNumberText.setError("Enter Phone Number");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editDataUsedText.getText().toString().isEmpty())
+                    {
+                        editDataUsedText.setError("Enter Data Used");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editMinsUsedText.getText().toString().isEmpty())
+                    {
+                        editMinsUsed.setError("Enter Minutes Used");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editManufacturerNameText.getText().toString().isEmpty())
+                    {
+                        editManufacturerNameText.setError("Enter Manufacturer Name");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editPlanNameText.getText().toString().isEmpty())
+                    {
+                        editPlanNameText.setError("Enter Plan Name");
+                        someFlag = true;
+                        return;
+                    }
+                    if(!Validations.getInstance().mobileValidation(editPhoneNumberText.getText().toString()))
+                    {
+                        editPhoneNumberText.setError("Invalid Phone number");
+                        new MaterialAlertDialogBuilder(AddNewBillActivity.this)
+                                .setTitle("Invalid phone number")
+                                .setMessage("Please check the Phone no. you entered")
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .show();
+                        someFlag = true;
+                        return;
+                    }
+                    if (!someFlag)
+                    {
+                        Mobile mObj = new Mobile(editBillId.getText().toString(),
+                                Validations.getInstance().stringToDate(editBillDateText.getText().toString()),
+                                Bill.BillType.Mobile,
+                                editManufacturerNameText.getText().toString(),
+                                editPlanNameText.getText().toString(),
+                                editPhoneNumberText.getText().toString(),
+                                Integer.parseInt(editDataUsedText.getText().toString()),
+                                Integer.parseInt(editMinsUsedText.getText().toString()));
+                        customerObj2.getCustomerBills().put(mObj.getBillId(), mObj);
+                        Intent mIntent = new Intent(AddNewBillActivity.this, BillTotalActivity.class);
+                        mIntent.putExtra("CustomerBills", customerObj2);
+                        startActivity(mIntent);
+                    }
+                }
+            });
+        }
+
+        if(position == 1)
+        {
+            hidefields();
+            clearfields();
+            editUnitsUsed.setVisibility(View.VISIBLE);
+            editAgencyName.setVisibility(View.VISIBLE);
+            editAgencyName.setHint("ENTER AGENCY NAME");
+            editUnitsUsed.setHint("ENTER UNITS USED");
+            buttonAddBill.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    boolean someFlag = false;
+                    if(editBillIdtext.getText().toString().isEmpty())
+                    {
+                        editBillIdtext.setError("Please enter the bill ID");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editBillDateText.getText().toString().isEmpty()){
+                        editBillDateText.setError("Please enter your the bill text");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editUnitsUsedtext.getText().toString().isEmpty())
+                    {
+                        editUnitsUsedtext.setError("Please enter the units used");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editAgencyNameText.getText().toString().isEmpty())
+                    {
+                        editAgencyNameText.setError("Please enter the agency");
+                        someFlag = true;
+                        return;
+                    }
+                    if(!editBillIdtext.getText().toString().contains("HY"))
+                    {
+                        new MaterialAlertDialogBuilder(AddNewBillActivity.this)
+                                .setTitle("Invalid bill ID")
+                                .setMessage("Hydro bill IDs must contain HY")
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .show();
+                        someFlag = true;
+                        return;
+                    }
+                    if(!someFlag) {
+                        Hydro hObj = new Hydro(editBillIdtext.getText().toString(),
+                                Validations.getInstance().stringToDate(editBillDateText.getText().toString()),
+                                Bill.BillType.Hydro,
+                                editAgencyNameText.getText().toString(),
+                                Integer.parseInt(editUnitsUsedtext.getText().toString()));
+                        customerObj2.getCustomerBills().put(hObj.getBillId(), hObj);
+                        Intent mIntent = new Intent(AddNewBillActivity.this, BillTotalActivity.class);
+                        mIntent.putExtra("CustomerBills", customerObj2);
+                        startActivity(mIntent);
+                    }
+                }
+            });
+        }
+
+        if(position == 2)
+        {
+            hidefields();
+            clearfields();
+            editUnitsUsed.setVisibility(View.VISIBLE);
+            editAgencyName.setVisibility(View.VISIBLE);
+            editAgencyName.setHint("ENTER PROVIDER NAME");
+            editUnitsUsed.setHint("ENTER DATA USED");
+            buttonAddBill.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    boolean someFlag = false;
+                    if(editBillIdtext.getText().toString().isEmpty())
+                    {
+                        editBillIdtext.setError("Please enter the bill ID");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editBillDateText.getText().toString().isEmpty()){
+                        editBillDateText.setError("Please enter your the bill text");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editAgencyNameText.getText().toString().isEmpty())
+                    {
+                        editAgencyNameText.setError("Please enter the provider");
+                        someFlag = true;
+                        return;
+                    }
+                    if(editUnitsUsedtext.getText().toString().isEmpty())
+                    {
+                        editDataUsedText.setError("Please enter the data used");
+                        someFlag = true;
+                        return;
+                    }
+                    if(!editBillIdtext.getText().toString().contains("IN"))
+                    {
+                        new MaterialAlertDialogBuilder(AddNewBillActivity.this)
+                                .setTitle("Invalid bill ID")
+                                .setMessage("Hydro bill IDs must contain IN")
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .show();
+                        someFlag = true;
+                        return;
+                    }
+                    Internet iObj = new Internet   (editBillIdtext.getText().toString(),
+                            Validations.getInstance().stringToDate(editBillDateText.getText().toString()),
+                            Bill.BillType.Internet,
+                            editAgencyNameText.getText().toString(),
+                            Double.parseDouble(editUnitsUsedtext.getText().toString()));
+                    customerObj2.getCustomerBills().put(iObj.getBillId(),iObj);
+                    Intent mIntent = new Intent(AddNewBillActivity.this, BillTotalActivity.class);
+                    mIntent.putExtra("CustomerBills", customerObj2);
+                    startActivity(mIntent);
+                }
+            });
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+    }
+
+    private void addingDatePicker()
+    {
+        editBillDateText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        AddNewBillActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        mDateSetListener,
+                        year, month, day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day)
+            {
+                String date ="";
+                month = month + 1;
+                String monthName = getMonthName(month);
+                if(day<10) {
+                    date = "0"+day + "-" + monthName + "-" + year;
+                }
+                else
+                {
+                    date = day + "-" + monthName + "-" + year;
+                }
+                editBillDateText.setText(date);
+            }
+        };
+    }
+
+    public static String getMonthName(int monthNumber){
+        String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
+        return monthNames[monthNumber-1];
+    }
+    public void initFields()
+    {
+        editMinsUsed.setVisibility(View.VISIBLE);
+        editPhoneNumber.setVisibility(View.VISIBLE);
+        editDataUsed.setVisibility(View.VISIBLE);
+        editMinsUsed.setVisibility(View.VISIBLE);
+        editPlanName.setVisibility(View.VISIBLE);
+        editManufacturerName.setVisibility(View.VISIBLE);
+    }
+    public void hidefields()
+    {
+        editMinsUsed.setVisibility(View.INVISIBLE);
+        editPhoneNumber.setVisibility(View.INVISIBLE);
+        editDataUsed.setVisibility(View.INVISIBLE);
+        editMinsUsed.setVisibility(View.INVISIBLE);
+        editPlanName.setVisibility(View.INVISIBLE);
+        editManufacturerName.setVisibility(View.INVISIBLE);
+    }
+
+    public void clearfields()
+    {
+        editPhoneNumberText.getText().clear();
+        editDataUsedText.getText().clear();
+        editMinsUsedText.getText().clear();
+        editPlanNameText.getText().clear();
+        editManufacturerNameText.getText().clear();
+        editBillDateText.getText().clear();
+        editBillIdtext.getText().clear();
+        editAgencyNameText.getText().clear();
+        editDataUsedText.getText().clear();
+        editUnitsUsedtext.getText().clear();
+    }
+}
