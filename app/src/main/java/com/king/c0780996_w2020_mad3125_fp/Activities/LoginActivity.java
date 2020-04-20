@@ -1,6 +1,7 @@
 package com.king.c0780996_w2020_mad3125_fp.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -10,6 +11,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -139,9 +141,48 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         }
                     }
-                    invalidLogin();
+                    loginFail();
                 }
             });
         }
 
-   
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    public String loadJSONFromAsset(String filename) {
+        String json = null;
+        try {
+            InputStream is = getAssets().open(filename);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, StandardCharsets.UTF_8);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+    public void loginPass()
+    {
+        Intent mIntent = new Intent(LoginActivity.this, CustomerListActivity.class);
+        startActivity(mIntent);
+        return;
+    }
+
+    public void loginFail()
+    {
+        new MaterialAlertDialogBuilder(LoginActivity.this)
+                .setTitle("Invalid username or password")
+                .setMessage("Incorrect information entered.")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+        return;
+    }
+}
+
