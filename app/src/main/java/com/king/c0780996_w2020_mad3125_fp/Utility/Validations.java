@@ -18,4 +18,21 @@ public class Validations {
     private Validations()
     { }
 
+    public LocalDate stringToDate(String aDate)
+    {
+        DateTimeFormatter formatter = DateTimeFormat.forPattern("dd-MMM-yyyy");
+        return formatter.parseLocalDate(aDate);
+    }
+
+    public String doubleFormatter(Double d)
+    {
+        return String.format("$ " + "%,.2f", d);
+    }
+
+    public void makeToast(String message, Context context)
+    {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
    
+}
