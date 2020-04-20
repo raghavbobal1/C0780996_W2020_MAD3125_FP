@@ -4,18 +4,21 @@ RAGHAV BOBAL (C0780996)
 # PROJECT DESCRIPTION
 An application that calculates the total bills for a customer. A bill could be an internet bill, a hydro bill,a bill for mobile usage or can be an insurance bill. A customer may or may not have multiple bills.
 
-Part #1 - Edit launchScreen, implement proper login/logout, display a list of customers, add new customers, data access and storage with singleton class, validations, display errors and alerts, display basic customer information.
-PART #2 - Display bills of the respective customers, adding a button to add new bills for each respective customer and adding adding three new respective view controllers and designed it accordingly.
+Edit launchScreen, implement proper login/logout, display a list of customers, add new customers, data access and storage with singleton class, validations, display errors and alerts, display basic customer information.
+Display bills of the respective customers, adding a button to add new bills for each respective customer and adding adding three new respective view controllers and designed it accordingly.
 # PROJECT STRUCTURE
 
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/classt10.png" alt="Class Structure" style="float: left; margin-right: 10px;"/>
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/classt11.png" alt="Class Structure" style="float: center; margin-right: 50px;"/>
 
 # REFERENCES
-* [Stackoverflow.com](https://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift) - Used for email validation and exception handling for email.
-* [Git Hub](https://gist.github.com/ranmyfriend/96f6ae1b64b177af62de402c6898a314) - Used for mobile number validation and exception handling for mobile number.
-* [Plist](https://learnappmaking.com/plist-property-list-swift-how-to/)- Used for adding and using Plists.
-* [Date Picker](https://stackoverflow.com/questions/48109663/cant-set-a-converted-date-from-string-as-minimum-date-in-datepicker)- helped with adding date picker.
-* [GITG](https://superuser.com/questions/283309/how-to-delete-the-git-reference-refs-original-refs-heads-master) - Used to remove a git error that was causing problems in commiting and pushing the code.
-* [UI Color](https://www.uicolor.xyz/#/rgb-to-ui)- Used to set the color of the table cells.
-* [Segment Control](https://www.youtube.com/watch?v=WrHUCZf7FJA) - Used to create the segmented control for bill type.
+* [Youtube.com](https://www.youtube.com/watch?v=VDZas1ax_Xo) - Helped with text watcher.
+* [Android.jlelse.eu](https://android.jlelse.eu/the-complete-android-splash-screen-guide-c7db82bce565) - Creating a splashscreen.
+* [Youtube.com](https://www.youtube.com/watch?v=A9rcKZUm0zM&t=287s) -  Used for removing Action Bars.
+* [Joda.org](https://www.joda.org/joda-time/index.html) - Working with Joda-Time.
+* [Youtube.com](https://www.youtube.com/watch?v=09EsYJrhBYE&t=356s) - Used for text inout layout.
+* [Stackoverflow.com](https://stackoverflow.com/questions/20082855/regular-expression-for-canadian-sin-social-insurance-number) - For SIN Validation.
+* [Sitepoint.com](https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/) - Data transfer between activities using parcelable.
+* [Journaldev.com](https://www.journaldev.com/14748/android-textinputlayout-example) - Working with textfields using Material Design.
+* [Youtube.com](https://www.youtube.com/watch?v=aS__9RbCyHg) - Helped with pretty much everything.
+* [Github.com](https://github.com/AbhishekSanthoshJaya/C0769778_W2020_MAD3125_MidTerm) - Helped with calculations of tax.
