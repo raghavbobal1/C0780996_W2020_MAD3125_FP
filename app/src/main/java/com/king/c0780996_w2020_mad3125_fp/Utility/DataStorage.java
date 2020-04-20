@@ -29,7 +29,6 @@ public class DataStorage {
         return this.customerMap;
     }
 
-
     public void loadData() {
         Customer c4 = new Customer("004",
                 "Raghav",
@@ -68,7 +67,6 @@ public class DataStorage {
                 "12345",
                 "18/09/1976",
                 "Dubai,UAE", R.drawable.majju_icon);
-
 
         Mobile m1 = new Mobile("MB001",
                 org.joda.time.LocalDate.now(),

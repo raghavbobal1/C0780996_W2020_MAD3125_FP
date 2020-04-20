@@ -43,11 +43,11 @@ public class Customer implements Parcelable
         email = in.readString();
         userName = in.readString();
         password = in.readString();
+        location = in.readString();
         dateOfBirth = in.readString();
         customerBillsHashMap = in.readHashMap(Bill.class.getClassLoader());
         allTotal = in.readDouble();
         customerImg = in.readInt();
-        location = in.readString();
     }
 
     public static final Creator<Customer> CREATOR = new Creator<Customer>() {
@@ -184,8 +184,8 @@ public class Customer implements Parcelable
         dest.writeString(email);
         dest.writeString(userName);
         dest.writeString(password);
-        dest.writeString(dateOfBirth);
         dest.writeString(location);
+        dest.writeString(dateOfBirth);
         dest.writeMap(customerBillsHashMap);
         if (allTotal == null) {
             dest.writeByte((byte) 0);

@@ -100,7 +100,6 @@ public class LoginActivity extends AppCompatActivity
                 .setSubtitle("Log in using your biometric credential")
                 .setNegativeButtonText("Use password")
                 .build();
-
         // BIOMETRIC CODE END
 
         ActionBar mActionBar = getSupportActionBar();
@@ -209,7 +208,6 @@ public class LoginActivity extends AppCompatActivity
 
     public void successfulLogin()
     {
-        mp.start();
         Intent mIntent = new Intent(LoginActivity.this, CustomerListActivity.class);
         startActivity(mIntent);
         return;

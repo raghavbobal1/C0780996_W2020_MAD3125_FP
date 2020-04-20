@@ -52,7 +52,6 @@ public class AddNewCustomerActivity extends AppCompatActivity
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private String gender;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,8 +121,6 @@ public class AddNewCustomerActivity extends AppCompatActivity
             }
         };
     }
-
-
 
     public String getGender()
     {
@@ -231,6 +228,4 @@ public class AddNewCustomerActivity extends AppCompatActivity
             startActivity(mIntent);
         }
     }
-
-
 }

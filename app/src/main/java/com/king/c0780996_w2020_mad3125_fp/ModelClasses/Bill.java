@@ -18,7 +18,6 @@ public abstract class Bill implements Serializable
         Internet,
     }
 
-
     Bill(String billId, LocalDate billDate, BillType billType)
     {
         this.billId = billId;

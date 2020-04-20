@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,7 @@ public class CustomerListActivity extends AppCompatActivity {
     private ImageView barAddCustomer;
     private ImageView barLogout;
 
-    @BindView(R.id.btnAddCustomer) Button btnAddCustomer;
+    @BindView(R.id.btnAddCustomer) ImageView btnAddCustomer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +70,6 @@ public class CustomerListActivity extends AppCompatActivity {
         });
 
         loadCustomers();
-
         customerAdapter = new CustomerAdapter(customerArrayList);
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
