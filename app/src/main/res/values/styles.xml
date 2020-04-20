@@ -21,6 +21,10 @@
         <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
     </style>
 
+    <style name="SwitchTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:color">#F34280</item>
+    </style>
+
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>

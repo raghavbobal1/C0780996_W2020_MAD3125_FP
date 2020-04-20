@@ -50,6 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:inputType="textPassword|numberPassword"
             android:textColorHint="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,6 +115,7 @@
         android:layout_marginBottom="40dp"
         android:shadowColor="#F34280"
         android:text=" Remember Me"
+        android:theme="@style/SwitchTheme"
         android:textColor="#FFFFFF"
         android:textOn="ON"
         app:layout_constraintBottom_toTopOf="@+id/btnSignIn"
