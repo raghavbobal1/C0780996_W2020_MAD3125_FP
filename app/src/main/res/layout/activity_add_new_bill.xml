@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:background="#000000"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -54,59 +54,77 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editBillId"
-            android:layout_width="324dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="323dp"
+            android:layout_height="63dp"
+            android:background="#F34280"
             android:textColorHint="#FDFCFD"
-            app:layout_constraintEnd_toEndOf="@+id/editBillDate"
-            app:layout_constraintStart_toStartOf="@+id/editBillDate"
-            app:layout_constraintTop_toBottomOf="@+id/editBillDate">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerBillType"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerBillType"
+            app:layout_constraintVertical_bias="0.021">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editBillIdtext"
-                android:layout_width="322dp"
-                android:layout_height="42dp"
-                android:background="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F34280"
                 android:hint="Enter Bill Id" />
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editUnitsUsed"
-            android:layout_width="322dp"
-            android:layout_height="50dp"
+            android:layout_width="321dp"
+            android:layout_height="81dp"
             android:layout_marginTop="12dp"
             android:background="#000000"
             android:hint="Enter Units Used"
-            app:hintTextColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="@+id/editBillId"
-            app:layout_constraintStart_toStartOf="@+id/editBillId"
-            app:layout_constraintTop_toBottomOf="@+id/editBillId">
+            android:textColorHint="#F34280"
+            app:hintTextColor="#F34280"
+            app:layout_constraintEnd_toEndOf="@+id/editPhoneNumber"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/editPhoneNumber">>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editUnitsUsedtext"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#000000"
+                android:layout_height="68dp"
+                android:background="#F34280"
                 android:hint="Enter Units Used"
                 android:textColorHint="#FFFFFF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editAgencyName"
+            android:layout_width="323dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:textColorHint="#FFFFFF"
+            app:hintTextColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/editUnitsUsed"
+            app:layout_constraintTop_toBottomOf="@+id/editUnitsUsed">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editAgencyNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
+                android:background="#F34280"
                 android:hint="Enter Agency Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editPhoneNumber"
             android:layout_width="324dp"
-            android:layout_height="50dp"
+            android:layout_height="69dp"
             android:layout_marginTop="12dp"
             android:background="#000000"
             android:hint="Enter Phone Number"
             android:textColorHint="#FFFFFF"
+            app:hintTextColor="#F34280"
             app:layout_constraintEnd_toEndOf="@+id/editBillId"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/editBillId"
             app:layout_constraintTop_toBottomOf="@+id/editBillId">
 
@@ -114,67 +132,64 @@
                 android:id="@+id/editPhoneNumberText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
-                android:hint="hint" />
+                android:background="#F34280"
+                android:hint="hint"
+                android:textColorHint="#F34280" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editDataUsed"
-            android:layout_width="324dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="323dp"
+            android:layout_height="wrap_content"
             android:textColorHint="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="@+id/editUnitsUsed"
-            app:layout_constraintStart_toStartOf="@+id/editPhoneNumber"
-            app:layout_constraintTop_toBottomOf="@+id/editUnitsUsed">
+            app:layout_constraintEnd_toEndOf="@+id/editAgencyName"
+            app:layout_constraintStart_toStartOf="@+id/editAgencyName"
+            app:layout_constraintTop_toBottomOf="@+id/editAgencyName">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editDataUsedText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#F34280"
                 android:hint="Enter Data Used"
                 android:textColorHint="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editAgencyName"
-            android:layout_width="324dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:textColorHint="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="@+id/editUnitsUsed"
-            app:layout_constraintStart_toStartOf="@+id/editUnitsUsed"
-            app:layout_constraintTop_toBottomOf="@+id/editUnitsUsed">
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editManufacturerName"
-            android:layout_width="324dp"
-            android:layout_height="50dp"
+            android:layout_width="322dp"
+            android:layout_height="56dp"
             android:layout_marginTop="12dp"
             android:background="#000000"
             android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/editDataUsed"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="@+id/editDataUsed"
-            app:layout_constraintTop_toBottomOf="@+id/editMinsUsed">
+            app:layout_constraintTop_toBottomOf="@+id/editDataUsed">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editManufacturerNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
+                android:background="#F34280"
                 android:hint="Enter Manufacturer Name" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="45dp"
+            android:layout_height="1500dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editPlanName"
             android:layout_width="324dp"
-            android:layout_height="50dp"
+            android:layout_height="72dp"
             android:layout_marginTop="12dp"
-            android:background="#000000"
             android:textColorHint="#FFFFFF"
+            app:hintTextColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/editManufacturerName"
             app:layout_constraintStart_toStartOf="@+id/editManufacturerName"
             app:layout_constraintTop_toBottomOf="@+id/editManufacturerName">
@@ -183,75 +198,77 @@
                 android:id="@+id/editPlanNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
-                android:hint="Enter Plan Name" />
+                android:background="#F34280"
+                android:hint="Enter Plan Name"
+                android:textColorHint="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/buttonAddBill"
-            android:layout_width="324dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="16dp"
-            android:background="#F34280"
-            android:text="Add Bill"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:backgroundTint="#F34280"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editPlanName" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editBillDate"
-            android:layout_width="324dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="328dp"
+            android:layout_height="64dp"
+            android:background="#000000"
             android:textColorHint="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="@+id/spinnerBillType"
-            app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerBillType">
+            app:layout_constraintEnd_toEndOf="@+id/editPlanName"
+            app:layout_constraintStart_toStartOf="@+id/editPlanName"
+            app:layout_constraintTop_toBottomOf="@+id/editPlanName">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editBillDateText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#040404"
+                android:background="#F34280"
                 android:hint="Enter Bill Date" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editMinsUsed"
-            android:layout_width="324dp"
-            android:layout_height="50dp"
+            android:layout_width="329dp"
+            android:layout_height="61dp"
             android:layout_marginTop="12dp"
-            android:background="#101010"
+            android:background="#000000"
             android:textColorHint="#FFFFFF"
-            app:hintTextColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="@+id/editManufacturerName"
+            app:layout_constraintEnd_toEndOf="@+id/editBillDate"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/editManufacturerName"
-            app:layout_constraintTop_toBottomOf="@+id/editDataUsed">
+            app:layout_constraintStart_toStartOf="@+id/editBillDate"
+            app:layout_constraintTop_toBottomOf="@+id/editBillDate">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editMinsUsedText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#000000"
-                android:hint="Enter Minutes Used" />
+                android:hint="Enter Mins Used"
+                android:textColorHint="#F34280" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/buttonAddBill"
+            android:layout_width="320dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="124dp"
+            android:background="#F34280"
+            android:text="ADD"
+            app:backgroundTint="#F34280"
+            app:layout_constraintEnd_toEndOf="@+id/editMinsUsed"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/editBillDate" />
+
+        <Button
             android:id="@+id/buttonClearFields"
-            android:layout_width="324dp"
-            android:layout_height="42dp"
-            android:layout_marginBottom="16dp"
-            android:background="#FFFFFF"
+            android:layout_width="317dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="20dp"
             android:text="@string/clear_fields"
             android:textColor="#F34280"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/buttonAddBill" />
-
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/buttonAddBill"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="@+id/buttonAddBill"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAddBill" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 </androidx.core.widget.NestedScrollView>

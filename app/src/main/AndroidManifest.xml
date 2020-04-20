@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Activities.AboutUsActivity" />
         <activity android:name=".Activities.BillInfoActivity" />
-        <activity android:name=".Activities.AddNewCustomerActivity"/>
+        <activity android:name=".Activities.AddNewCustomerActivity" />
         <activity android:name=".Activities.AddNewBillActivity" />
         <activity android:name=".Activities.BillTotalActivity" />
         <activity android:name=".Activities.CustomerListActivity" />

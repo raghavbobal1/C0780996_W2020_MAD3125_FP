@@ -9,25 +9,26 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/billTotalRV"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="415dp"
+        android:layout_height="403dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.259" />
 
     <TextView
         android:id="@+id/textBillTotal"
-        android:layout_width="190dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="344dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="488dp"
         android:text="Bill Total"
         android:textColor="#F34280"
-        android:textSize="36sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:fontFamily="@font/coiny"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/billTotalRV" />
 

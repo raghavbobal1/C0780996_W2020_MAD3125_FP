@@ -16,6 +16,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="12dp"
         android:background="#000000"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,8 +37,8 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textBillType"
-        android:layout_width="208dp"
-        android:layout_height="90dp"
+        android:layout_width="215dp"
+        android:layout_height="112dp"
         android:layout_marginStart="215dp"
         android:layout_marginLeft="215dp"
         android:layout_marginTop="105dp"
@@ -56,7 +57,7 @@
         android:textColor="#F34280"
         android:textColorHighlight="#F34280"
         android:textColorLink="#FFF9FD"
-        android:textSize="22sp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:fontFamily="@font/coiny"
         app:layout_constraintBottom_toBottomOf="parent"

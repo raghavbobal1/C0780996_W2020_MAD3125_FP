@@ -9,10 +9,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customerRV"
-        android:layout_width="511dp"
-        android:layout_height="862dp"
+        android:layout_width="411dp"
+        android:layout_height="564dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -21,7 +22,7 @@
         android:id="@+id/btnAddCustomer"
         android:layout_width="71dp"
         android:layout_height="52dp"
-        android:layout_marginTop="744dp"
+        android:layout_marginTop="600dp"
         android:background="#070707"
         android:scaleType="fitCenter"
         android:src="@drawable/add_btn"
@@ -29,20 +30,5 @@
         app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/customerRV" />
-
-    <TextView
-        android:id="@+id/totalAmntText"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        android:text="TOTAL"
-        android:textColor="#F34280"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/coiny"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
