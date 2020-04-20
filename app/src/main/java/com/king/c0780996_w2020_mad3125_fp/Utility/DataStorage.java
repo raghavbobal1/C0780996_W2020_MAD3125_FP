@@ -56,7 +56,7 @@ public class DataStorage {
                 "kush@gmail.com",
                 "kbhatia",
                 "1234qwer",
-                "21/07/1983",
+                "21/07/1997",
                 "Delhi,India", R.drawable.kush_icon);
 
         Customer c1 = new Customer("001",

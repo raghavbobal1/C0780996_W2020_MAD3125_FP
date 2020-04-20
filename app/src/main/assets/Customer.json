@@ -1,0 +1,48 @@
+[
+  {
+    "customerId": "004",
+    "firstName": "Raghav",
+    "lastName": "Bobal",
+    "gender": "Male",
+    "email": "raghav@gmail.com",
+    "userName" : "rgv",
+    "password" : "raghav",
+    "dateOfBirth" : "13/07/1997",
+    "location" : "Delhi, India"
+
+  },
+  {
+    "customerId": "002",
+    "firstName": "Prakash",
+    "lastName": "Rana",
+    "gender": "Male",
+    "email": "prana@gmail.com",
+    "userName" : "Rana",
+    "password" : "rana",
+    "dateOfBirth" : "27/04/1995",
+    "location" : "Kathmandu, Nepal"
+  },
+  {
+    "customerId": "003",
+    "firstName": "Kush",
+    "lastName": "Bhatia",
+    "gender": "Male",
+    "email": "kush@gmail.com",
+    "userName" : "kbhatia",
+    "password" : "1234qwer",
+    "location" : "Delhi, India",
+    "dateOfBirth" : "21/07/1997"
+  },
+  {
+    "customerId": "001",
+    "firstName": "Majnu",
+    "lastName": "Bhai",
+    "gender": "Male",
+    "email": "majju@gmail.com",
+    "userName" : "majju",
+    "password" : "12345",
+    "dateOfBirth" : "18/09/1976",
+    "location" : "Dubai,UAE"
+  }
+  ]
+
