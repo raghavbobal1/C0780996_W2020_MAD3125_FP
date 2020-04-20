@@ -121,4 +121,98 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         };
     }
 
-    
+    public static String getMonthName(int monthNumber){
+        String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
+        return monthNames[monthNumber-1];
+    }
+
+    public void fieldChecker()
+    {
+        boolean someFlag = false;
+        if(editCustomerIdtext.getText().toString().isEmpty())
+        {
+            editCustomerId.setError("Please enter your customer ID");
+            someFlag = true;
+            return;
+        }
+        if(editFNametext.getText().toString().isEmpty()){
+            editFName.setError("Please enter your first name");
+            someFlag = true;
+            return;
+        }
+        if(editLnametext.getText().toString().isEmpty())
+        {
+            editLname.setError("Please enter your last name");
+            someFlag = true;
+            return;
+        }
+        if(editDOBtext.getText().toString().isEmpty())
+        {
+            editDOB.setError("Please enter your date of birth");
+            someFlag = true;
+            return;
+        }
+        if(editUserNameText.getText().toString().isEmpty())
+        {
+            editUserName.setErrorEnabled(true);
+            editUserName.setError("Please enter your username");
+            someFlag = true;
+            return;
+        }
+        if(editEmailText.getText().toString().isEmpty())
+        {
+            editEmail.setError("Please enter your email");
+            someFlag = true;
+            return;
+        }
+        if(editPasswordText.getText().toString().isEmpty())
+        {
+            editPassword.setErrorEnabled(true);
+            editPassword.setError("Please enter your password");
+            someFlag = true;
+            return;
+        }
+        if(editLocationText.getText().toString().isEmpty())
+        {
+            editLocation.setError("Please enter your location");
+            someFlag = true;
+            return;
+        }
+        if(!Validations.getInstance().emailValidation(editEmailText.getText().toString()))
+        {
+            editEmail.setError("Please enter a valid email address");
+            new MaterialAlertDialogBuilder(AddNewCustomerActivity.this)
+                    .setTitle("Invalid email address")
+                    .setMessage("Please check the email you entered")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .show();
+            someFlag = true;
+            return;
+        }
+        if(!someFlag) {
+            Customer customer = new Customer(editCustomerIdtext.getText().toString(),
+                    editFNametext.getText().toString(),
+                    editLnametext.getText().toString(),
+                    getGender(),
+                    editEmailText.getText().toString(),
+                    editUserNameText.getText().toString(),
+                    editPasswordText.getText().toString(),
+                    editLocationText.getText().toString(),
+                    editDOBtext.getText().toString(),
+                    R.drawable.new_user);
+            DataStorage.getInstance().getCustomerMap().put(customer.getCustomerId(), customer);
+            LoginActivity.emailList.add(editEmailText.getText().toString());
+            LoginActivity.passwordList.add(editPasswordText.getText().toString());
+            Intent mIntent = new Intent(AddNewCustomerActivity.this, CustomerListActivity.class);
+            mIntent.putExtra("CustomerBills", customer);
+            startActivity(mIntent);
+        }
+    }
+
+   
+}
