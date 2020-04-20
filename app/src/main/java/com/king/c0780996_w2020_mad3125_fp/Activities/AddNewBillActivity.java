@@ -57,7 +57,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
     @BindView(R.id.editAgencyName) TextInputLayout editAgencyName;
     @BindView(R.id.editAgencyNameText) TextInputEditText editAgencyNameText;
     @BindView(R.id.buttonAddBill) Button buttonAddBill;
-    @BindView(R.id.buttonAddBill) Button buttonClearFields;
+    @BindView(R.id.buttonClearFields) Button buttonClearFields;
 
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     Customer customerObj2;
