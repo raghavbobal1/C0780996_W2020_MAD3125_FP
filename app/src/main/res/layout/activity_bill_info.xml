@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgBillType"
+        android:id="@+id/billTypeImg"
         android:layout_width="83dp"
         android:layout_height="90dp"
         android:layout_marginStart="84dp"
@@ -262,7 +262,7 @@
 
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragManufac"
+        android:id="@+id/manufacturerText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
@@ -291,7 +291,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragPlanName"
+        android:id="@+id/planNameText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
@@ -320,7 +320,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragDataUsed"
+        android:id="@+id/dataUsedtext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
@@ -349,7 +349,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragMinsUsed"
+        android:id="@+id/minutesUsedText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
@@ -378,7 +378,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragBillId"
+        android:id="@+id/billIdText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
@@ -407,7 +407,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragBillDate"
+        android:id="@+id/text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
@@ -436,7 +436,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragBillAmount"
+        android:id="@+id/billAmountText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
