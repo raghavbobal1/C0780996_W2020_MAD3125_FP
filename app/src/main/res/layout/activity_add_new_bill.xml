@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#040303"
-    android:hapticFeedbackEnabled="false">
+    android:fillViewport="true"
+    android:background="#000000"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".AddNewBillActivity">
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="251dp"
@@ -27,7 +33,7 @@
         android:layout_height="42dp"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="140dp"
         android:text="Select Bill Type-"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
@@ -119,6 +125,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter Data Used"
             android:textColorHint="#FFFFFF" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -139,6 +146,23 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editMinsUsed"
+        android:layout_width="324dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDataUsed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editMinsUsedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Minutes Used" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editManufacturerName"
         android:layout_width="324dp"
         android:layout_height="50dp"
@@ -154,6 +178,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Manufacturer Name" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -178,21 +203,7 @@
         android:id="@+id/buttonAddBill"
         android:layout_width="324dp"
         android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:background="#FFFFFF"
-        android:text="CLEAR FIELDS"
-        android:textColor="#F34280"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonClearFields" />
-
-    <Button
-        android:id="@+id/buttonClearFields"
-        android:layout_width="324dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         android:background="#F34280"
         android:text="Add Bill"
         android:textColor="#FFFFFF"
@@ -200,6 +211,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPlanName" />
+        app:layout_constraintTop_toBottomOf="@+id/editBillDate" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editBillDate"
+        android:layout_width="324dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPlanName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editBillDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Bill Date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonClearFields"
+        android:layout_width="324dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:text="@string/clear_fields"
+        android:textColor="#ED256D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddBill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
