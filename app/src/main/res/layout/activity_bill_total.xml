@@ -8,7 +8,7 @@
     tools:context=".Activities.BillTotalActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2"
+        android:id="@+id/billTotalRV"
         android:layout_width="409dp"
         android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textBillTotal"
         android:layout_width="190dp"
         android:layout_height="64dp"
         android:layout_marginTop="40dp"
@@ -29,16 +29,16 @@
         app:fontFamily="@font/coiny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recyclerView2" />
+        app:layout_constraintTop_toTopOf="@+id/billTotalRV" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/addBillimg"
         android:layout_width="55dp"
         android:layout_height="51dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="60dp"
-        android:background="000000"
+        android:background="#000000"
         android:scaleType="centerCrop"
         android:src="@drawable/add_btn"
         app:layout_constraintBottom_toBottomOf="parent"
