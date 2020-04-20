@@ -33,6 +33,30 @@ public class Validations {
     {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
+    public boolean emailValidation(String s) {
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(s);
+        return matcher.find();
+    }
 
-   
+    public boolean mobileValidation(String s)
+    {
+        if(s.length() == 10)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public String gbFormatter(Integer s)
+    {
+        return s + " GB";
+    }
+
+    public String minsFormatter(String s)
+    {
+        return s + " MINS";
+    }
+
 }
