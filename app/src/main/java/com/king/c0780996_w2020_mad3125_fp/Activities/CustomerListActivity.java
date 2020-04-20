@@ -36,4 +36,55 @@ public class CustomerListActivity extends AppCompatActivity {
 
     @BindView(R.id.btnAddCustomer) Button btnAddCustomer;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_customer_list);
+        ButterKnife.bind(this);
+
+        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.action_bar);
+        View view = getSupportActionBar().getCustomView();
+
+        barAddCustomer = view.findViewById(R.id.barAddCustomer);
+        barLogout = view.findViewById(R.id.barLogout);
+
+        customerRV = findViewById(R.id.customerRV);
+
+        barAddCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(CustomerListActivity.this, AddNewCustomerActivity.class);
+                startActivity(mIntent);
+            }
+        });
+
+        barLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(CustomerListActivity.this, LoginActivity.class);
+                startActivity(mIntent);
+            }
+        });
+
+        loadCustomers();
+
+        customerAdapter = new CustomerAdapter(customerArrayList);
+        RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+
+        customerRV.setLayoutManager(mLinearLayoutManager);
+        customerRV.setAdapter(customerAdapter);
+
+        btnAddCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(CustomerListActivity.this, AddNewCustomerActivity.class);
+                startActivity(mIntent);
+            }
+        });
+    }
+
+   
+
 }
