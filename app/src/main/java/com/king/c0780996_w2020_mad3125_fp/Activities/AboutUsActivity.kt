@@ -1,4 +1,4 @@
-package com.king.c0780996_w2020_mad3125_fp
+package com.king.c0780996_w2020_mad3125_fp.Activities
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
 import androidx.annotation.RequiresApi
+import com.king.c0780996_w2020_mad3125_fp.R
 import java.io.IOException
 import java.nio.charset.StandardCharsets
 

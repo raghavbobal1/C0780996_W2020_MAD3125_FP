@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         private static final String PREF_USERNAME = "username";
         private static final String PREF_PASSWORD = "password";
 
-        Integer someflag = 1;
+        Integer firstflag = 1;
 
         @Override
         protected void onCreate(Bundle savedInstanceState)
@@ -76,5 +76,72 @@ public class LoginActivity extends AppCompatActivity {
             editPassword = findViewById(R.id.editPassword);
             aboutUsText = findViewById(R.id.aboutUsText);
 
+            aboutUsText.setPaintFlags(aboutUsText.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+            aboutUsText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent mIntent = new Intent(LoginActivity.this, AboutUsActivity.class);
+                    startActivity(mIntent);
+                }
+            });
+            sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+            editor = sharedPreferences.edit();
 
-           
+            String email = sharedPreferences.getString(PREF_USERNAME, null);
+            String password = sharedPreferences.getString(PREF_PASSWORD, null);
+            editEmailText.setText(email);
+            editPasswordText.setText(password);
+
+            try {
+                JSONObject obj = new JSONObject(loadJSONFromAsset("LoginInformation.json"));
+                JSONArray userArray = obj.getJSONArray("users");
+                for (int i = 0; i < userArray.length(); i++)
+                {
+                    JSONObject userInfo = userArray.getJSONObject(i);
+                    emailList.add(userInfo.getString("email"));
+                    passwordList.add(userInfo.getString("password"));
+                }
+            }
+            catch (JSONException e)
+            {
+                e.printStackTrace();
+            }
+
+            btnSignIn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if(editEmailText.getText().toString().isEmpty())
+                    {
+                        editEmailText.setError("Email id left blank");
+                    }
+
+                    if(editPasswordText.getText().toString().isEmpty())
+                    {
+                        editPasswordText.setError("Password left blank");
+                        return;
+                    }
+
+                    for(int i=0, j =0; i<emailList.size(); i++,j++)
+                    {
+                        if(emailList.get(i).equals(editEmailText.getText().toString()) && passwordList.get(i).equals(editPasswordText.getText().toString()))
+                        {
+                            if(switchRembMe.isChecked()){
+                                editor.putString(PREF_USERNAME,editEmailText.getText().toString());
+                                editor.putString(PREF_PASSWORD,editPasswordText.getText().toString());
+                                editor.apply();
+                            }
+                            else
+                            {
+                                editor.putString(PREF_USERNAME,"");
+                                editor.putString(PREF_PASSWORD,"");
+                                editor.apply();
+                            }
+                        }
+                    }
+                    invalidLogin();
+                }
+            });
+        }
+
+   

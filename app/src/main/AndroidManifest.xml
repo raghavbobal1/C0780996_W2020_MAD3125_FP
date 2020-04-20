@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutUsActivity"></activity>
+        <activity android:name=".Activities.AboutUsActivity"></activity>
         <activity android:name=".Activities.BillInfoActivity" />
         <activity android:name=".Activities.AddNewBillActivity" />
         <activity android:name=".Activities.BillTotalActivity" />
