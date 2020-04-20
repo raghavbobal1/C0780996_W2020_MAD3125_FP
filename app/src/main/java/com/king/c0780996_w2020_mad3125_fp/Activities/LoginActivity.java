@@ -57,4 +57,19 @@ public class LoginActivity extends AppCompatActivity {
 
         Integer someflag = 1;
 
-      
+        @Override
+        protected void onCreate(Bundle savedInstanceState)
+        {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            AndroidThreeTen.init(this);
+            ActionBar mActionBar = getSupportActionBar();
+            mActionBar.hide();
+
+            editEmailText = findViewById(R.id.editEmailText);
+            editPasswordText = findViewById(R.id.editPasswordText);
+            btnSignIn = findViewById(R.id.btnSignIn);
+            switchRembMe = findViewById(R.id.switchRembMe);
+            editEmail = findViewById(R.id.editEmail);
+            editPassword = findViewById(R.id.editPassword);
+
