@@ -10,11 +10,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editEmail"
-        android:layout_width="290dp"
-        android:layout_height="52dp"
+        android:layout_width="322dp"
+        android:layout_height="66dp"
         android:layout_marginBottom="340dp"
         android:background="#000000"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -24,20 +24,21 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editEmailText"
-            android:layout_width="286dp"
-            android:layout_height="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:hint="Email"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="#000000"
             android:textColorLink="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editPassword"
-        android:layout_width="290dp"
-        android:layout_height="52dp"
-        android:textColorHint="#FFFFFF"
+        android:layout_width="322dp"
+        android:layout_height="66dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -48,10 +49,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editPasswordText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColorHint="#FFFFFF" />
+            android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -98,26 +99,28 @@
 
     <Button
         android:id="@+id/btnSignIn"
-        android:layout_width="292dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginBottom="180dp"
+        android:layout_width="333dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="156dp"
         android:background="#F34280"
         android:text="SIGN IN"
+        app:backgroundTint="#F34280"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
         android:id="@+id/switchRembMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_width="152dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="16dp"
         android:shadowColor="#F34280"
+        android:singleLine="true"
         android:text=" Remember Me"
-        android:theme="@style/SwitchTheme"
         android:textColor="#FFFFFF"
         android:textOn="ON"
+        android:theme="@style/SwitchTheme"
         app:layout_constraintBottom_toTopOf="@+id/btnSignIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

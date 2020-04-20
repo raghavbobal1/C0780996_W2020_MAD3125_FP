@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity
     MediaPlayer mp;
     Integer someflag = 1;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,9 +75,6 @@ public class LoginActivity extends AppCompatActivity
             public void onAuthenticationError(int errorCode,
                                               @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
-                Toast.makeText(getApplicationContext(),
-                        "Authentication error: " + errString, Toast.LENGTH_SHORT)
-                        .show();
             }
 
             @Override
