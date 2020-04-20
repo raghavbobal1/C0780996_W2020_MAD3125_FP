@@ -167,11 +167,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner_gender"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:background="#FFFFFF"
+        style="@style/mySpinnerItemStyle"
         android:entries="@array/gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -193,11 +194,11 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="558dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="351dp"
-        tools:layout_editor_absoluteY="464dp" />
+        android:layout_width="57dp"
+        android:layout_height="1009dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
