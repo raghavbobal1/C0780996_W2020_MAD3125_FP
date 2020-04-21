@@ -49,11 +49,9 @@ public class LoginActivity extends AppCompatActivity
     public static ArrayList<String> passwordList = new ArrayList<>();
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
-
     public static final String PREFS_NAME = "MyPrefsFile";
     private static final String PREF_USERNAME = "username";
     private static final String PREF_PASSWORD = "password";
-
     private Executor executor;
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
@@ -66,8 +64,6 @@ public class LoginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AndroidThreeTen.init(this);
-
-        // BIOMETRIC CODE
         executor = ContextCompat.getMainExecutor(this);
         biometricPrompt = new BiometricPrompt(LoginActivity.this,
                 executor, new BiometricPrompt.AuthenticationCallback() {
@@ -76,7 +72,6 @@ public class LoginActivity extends AppCompatActivity
                                               @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
             }
-
             @Override
             public void onAuthenticationSucceeded(
                     @NonNull BiometricPrompt.AuthenticationResult result) {
@@ -85,21 +80,17 @@ public class LoginActivity extends AppCompatActivity
                         "Authentication succeeded!", Toast.LENGTH_SHORT).show();
                 successfulLogin();
             }
-
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
                 invalidFinger();
             }
         });
-
         promptInfo = new BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Biometric login for my app")
                 .setSubtitle("Log in using your biometric credential")
                 .setNegativeButtonText("Use password")
                 .build();
-        // BIOMETRIC CODE END
-
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
 

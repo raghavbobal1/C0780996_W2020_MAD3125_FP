@@ -5,12 +5,17 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#000000</item>
         <item name="colorPrimaryDark">#000000</item>
-        <item name="colorAccent">#000000</item>
+        <item name="colorAccent">#F34280</item>
     </style>
 
     <style name="mySpinnerItemStyle" parent="ThemeOverlay.AppCompat.Dark">
         <item name="android:textColor">#F34280</item>
         <item name="android:color">#F34280</item>
+    </style>
+
+    <style name="CustomAppTheme" parent="Theme.AppCompat">
+        <item name="android:textColorPrimaryDisableOnly">#000000</item>
+        <item name="colorAccent">#F34280</item>
     </style>
 
     <style name="FullscreenTheme" parent="AppTheme">
@@ -33,6 +38,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
@@ -259,8 +260,10 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
             clearfields();
             editUnitsUsed.setVisibility(View.VISIBLE);
             editAgencyName.setVisibility(View.VISIBLE);
-            editAgencyName.setHint("ENTER PROVIDER NAME");
-            editUnitsUsed.setHint("ENTER DATA USED");
+            editAgencyName.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.black_overlay)));
+            editUnitsUsed.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.black_overlay)));
+            editAgencyName.setHint("Enter Provider Name");
+            editUnitsUsed.setHint("Enter Data Used");
             buttonAddBill.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

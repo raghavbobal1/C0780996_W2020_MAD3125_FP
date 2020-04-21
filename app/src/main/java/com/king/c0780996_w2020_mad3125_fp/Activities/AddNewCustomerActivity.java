@@ -95,7 +95,7 @@ public class AddNewCustomerActivity extends AppCompatActivity
 
                 DatePickerDialog dialog = new DatePickerDialog(
                         AddNewCustomerActivity.this,
-                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        android.R.style.Widget_Holo_Light,
                         mDateSetListener,
                         year, month, day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));

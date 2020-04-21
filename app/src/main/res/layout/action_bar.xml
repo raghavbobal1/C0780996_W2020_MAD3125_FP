@@ -15,9 +15,9 @@
 
         <ImageView
             android:id="@+id/barLogout"
-            android:layout_width="45dp"
+            android:layout_width="34dp"
             android:layout_height="match_parent"
-            android:background="@drawable/logout"
+            android:background="#000000"
             android:src="@drawable/logout" />
 
         <TextView
