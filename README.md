@@ -11,6 +11,19 @@ Display bills of the respective customers, adding a button to add new bills for 
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/classt10.png" alt="Class Structure" style="float: left; margin-right: 10px;"/>
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/classt11.png" alt="Class Structure" style="float: center; margin-right: 50px;"/>
 
+
+## PROJECT OUTPUT
+Screenshot | Description
+--- | ---
+<img src="https://i.ibb.co/XbqKV5Y/splashscreen.png"/> | Splash screen that lasts 5 seconds.
+<img src="https://i.ibb.co/ckNr07L/Screenshot-1586486388.png"> | Data entry screen for the app.Used Text Watch that checks each field to see if it is empty,checks the age and SIN Number format. Date of filing is set to currentdate and it cannot be changed. Trying to change the date of filing field will give the user a warning message.
+<img src="https://i.ibb.co/7SJp9HX/Screenshot-1586486513.png"/> | Activity to display all the details of the person as well as the calculated details.
+<img src="https://i.ibb.co/VxZdzYK/Screenshot-1586486470.png"/> | Error that appears when the age is less than 18 years old.
+<img src="https://i.ibb.co/K0HztHZ/Screenshot-1586486904.png"/> | Validations for SIN number using regex, age and text watcher.
+<img src="https://i.ibb.co/gzjdH3L/Screenshot-1586486930.png"/> | Error if the gross income is left empty or is invalid.
+<img src="https://i.ibb.co/2KbBPGF/Screenshot-1586486941.png"/> | Error if the RRSP is left empty or is invalid.
+
+
 # REFERENCES
 * [Youtube.com](https://www.youtube.com/watch?v=VDZas1ax_Xo) - Helped with text watcher.
 * [Android.jlelse.eu](https://android.jlelse.eu/the-complete-android-splash-screen-guide-c7db82bce565) - Creating a splashscreen.
