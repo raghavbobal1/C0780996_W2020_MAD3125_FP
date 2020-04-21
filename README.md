@@ -23,6 +23,9 @@ Screenshot | Description
 <img src="https://i.ibb.co/RYw34bs/billslist.png"/> | Clicking on every customer will display their bill details and total and there is an add bill button to add new bills to the customer.
 <img src="https://i.ibb.co/6Fjh4ZT/detailbillview.png"/> | Clicking on every bill will produce this activity with more details of the bill.
 <img src="https://i.ibb.co/1TmnQrv/newbill.png"/> | Activity to add a new bill, with a bill type that hides unrelated fields to te respective bill type.
+<img src="https://i.ibb.co/PzQgg9Y/menubar.png"/> | A custom menu bar with Logout and Add Bill Options.
+<img src="https://i.ibb.co/KLvP9vq/errorifleftblank.png"/> | An error generated when the fields are left blank.
+<img src="https://i.ibb.co/LZZJKbZ/Add-New-Cust.png"/> | Activity to add new customers.
 # REFERENCES
 * [Youtube.com](https://www.youtube.com/watch?v=VDZas1ax_Xo) - Helped with text watcher.
 * [Android.jlelse.eu](https://android.jlelse.eu/the-complete-android-splash-screen-guide-c7db82bce565) - Creating a splashscreen.
